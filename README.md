@@ -16,9 +16,12 @@ Static website that decodes, values and trades Chinese lucky numbers. It runs on
 1. **AdSense:** put your `ca-pub-…` ID in `assets/js/config.js` and uncomment the line in `ads.txt`.
 2. **Donations:** paste PayPal, Stripe, BMAC, Ko-fi, Patreon or GitHub Sponsors links into `config.js`.
 3. **Forms:** submit any form once, then click **Activate** in the one-time FormSubmit email sent to the owner inbox.
-4. **Custom domain (optional):** create a `CNAME` file containing `579999.com` and point DNS A records to 185.199.108.153 / 109.153 / 110.153 / 111.153.
+4. **Social image (optional):** run `python3 src/make_og.py`, commit `assets/img/og.png`, and add an `og:image` meta tag in `src/layout.py`.
+5. **Custom domain (optional):** create a `CNAME` file containing `579999.com` and point DNS A records to 185.199.108.153 / 109.153 / 110.153 / 111.153.
 
 ## Edit and rebuild
-Page templates live in `src/*.py`. A GitHub Action (`.github/workflows/build.yml`) runs `python build.py` on every push and commits the generated HTML. Locally: `python3 build.py`.
+GitHub Pages builds the site natively with Jekyll: `_layouts/default.html` wraps each page file (front matter + content). Page content lives in `src/*.py`. After editing, run `python3 jekyllize.py` to regenerate the layout, page files, `sitemap.xml` and `robots.txt`, then commit. For a full static preview, `python3 build.py` writes to `dist/`.
+
+**Enable hosting (one time):** repo Settings → Pages → Build and deployment → Source: *Deploy from a branch* → `main` / `/ (root)` → Save.
 
 Contact: all inquiries go through the site forms or https://web.works/contact.
