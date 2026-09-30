@@ -138,8 +138,8 @@ def render(path, title, desc, body, active=None, ld=None, og_type="website", ext
 <meta name="theme-color" content="#b3121f">
 <meta property="og:type" content="{og_type}"><meta property="og:site_name" content="579999.com">
 <meta property="og:title" content="{html.escape(full_title)}"><meta property="og:description" content="{html.escape(desc)}">
-<meta property="og:url" content="{canonical}"><meta property="og:image" content="{BASE}/assets/img/og.png">
-<meta name="twitter:card" content="summary_large_image">
+<meta property="og:url" content="{canonical}">
+<meta name="twitter:card" content="summary">
 <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
 <link rel="manifest" href="manifest.webmanifest">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
